@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chikkle Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/slick.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/responsive.css">
+</head>
+<body>
+    <!-- preloder st -->
+    <div id="preloder"></div>
+    <!-- preloder end -->
+     <!-- Navbar section start -->
+     <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="/">
+                <img src="{{ STATIC_URL }}image/logo.png" alt="Gallery VISION Logo" width="150"> <!-- Add your logo image -->
+            </a>
+            
+            <!-- Toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Centered Navigation items -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="sell.html">Sell Your Music</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="service.html" id="navbarDropdown" role="button" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="rights-management.html">Rights Management</a></li>
+                            <li><a class="dropdown-item" href="youtube-monetization.html">Youtube Monetization</a></li>
+                            <li><a class="dropdown-item" href="music-publishing.html">Music Publishing</a></li>
+                            <li><a class="dropdown-item" href="digital-distribution.html">Digital Distribution</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#plan-section">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="music-distribute.html">Music Distribution</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+                </ul>
+                <div class="d-flex ms-auto">
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="btn btn-outline-light me-2 navbar-login">Log Out</a>
+                        <div class="btn btn-outline-light me-2 navbar-sign">{{ request.user.username }}</div>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="btn btn-outline-light me-2 navbar-login">Log In</a>
+                        <a href="{% url 'sign_up' %}" class="btn btn-outline-light me-2 navbar-sign">Sign Up For Free</a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Login and Signup buttons aligned right -->
+        </div>
+    </nav>
+    <!-- Navbar section end -->
+
+    <!-- Banner Section Start -->
+    <section class="banner digital-distribute-banner music-distribute-banner">
+        <!-- Background pic -->
+        <div class="music-distribute-banner-background" style="background-image: url('{{ STATIC_URL }}image/store-banner.png');"></div>
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Banner Content -->
+        <div class="container">
+            <div class="banner-content">
+                <h1><span>Chikkle Music -</span> Music Distribution Partners</h1>
+                <p>Get your music out to the Best, Biggest, and Most popular platforms around the world.</p>
+                <a href="#" class="btn-banner banner-button">Distribute Your Music</a>
+        </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+<!-- store all section start -->
+<main class="store-all-section">
+<section class="store-item">
+    <div class="container py-5">
+    <h1 class="text-center mb-4">
+        The following DSPs are connected to <span>ChikleeMusic</span>
+       </h1>
+       <div class="row">
+        <!-- Repeat this block 109 times -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+          <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store1.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store2.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store3.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store4.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store5.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store6.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store7.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store8.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store9.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store10.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store11.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store12.png"/>"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store13.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store14.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store15.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store16.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store17.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store18.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store19.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store20.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store21.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store22.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store23.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store24.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store25.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store26.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store27.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store28.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store29.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store30.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store31.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store32.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store33.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store34.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store35.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store36.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store37.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store38.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store39.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store40.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store41.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+         <div class="card p-3 text-center">
+            <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store42.png"/>
+         </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store43.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store44.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store45.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store46.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store47.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store48.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store49.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store50.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store51.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store52.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store53.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+                <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store54.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store55.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store56.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store57.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store58.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store59.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store60.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store61.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store62.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store63.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store64.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store65.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store65.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store66.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store66.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store67.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store68.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store69.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store70.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store71.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store72.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store73.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store74.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store75.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store76.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store107.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store78.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store79.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store80.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store81.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store82.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store83.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store84.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store85.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store86.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store87.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store88.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store89.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store90.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store91.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store92.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store93.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store94.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store95.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store96.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store97.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store98.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store99.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store100.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store101.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store102.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store103.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store104.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store105.png"/>
+            </div>
+           </div>
+           <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+            <div class="card p-3 text-center">
+               <img alt="Apple Music logo" src="{{ STATIC_URL }}image/store106.png"/>
+            </div>
+           </div>
+        <!-- Repeat this block 109 times -->
+       </div>
+       </div>
+</section>
+<!-- want to sell your music section start -->
+ <section class="sell-music">
+    <div class="container py-5">
+    <div class="text-center mt-4">
+        <p class="footer-text">
+         Want to <span>sell</span> your music with <span>us?</span>
+        </p>
+        <a href="#">
+            <button class="banner-button">Register For Free</button>
+        </a>
+       </div>
+       </div>
+    </section>
+ </section>
+<!-- want to sell your music section end -->
+</main>
+<!-- store all section end -->
+
+    <!-- footer section start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Get In Touch -->
+                <div class="col-md-3">
+                    <h5>Get In Touch</h5>
+                    <p>info@chikleemusic.com</p>
+                    <p>+8801825519018,+880 1612-585263 (mirpur 1, Dhaka)</p>
+
+                    <h5>Resources</h5>
+                    <a href="#">Get your music on Spotify</a>
+                    <a href="#">Get your music on Amazon</a>
+                    <a href="#">Get your music on Apple</a>
+                    <a href="#">Get your music on YouTube</a>
+                    <a href="#">Get your music on TikTok</a>
+                    <a href="#">Best Platform to sell Music Online</a>
+                    <a href="#">How to get your music on Spotify</a>
+                </div>
+
+                <!-- Company -->
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <a href="support.html">Support</a>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-md-3">
+                    <h5>Useful Links</h5>
+                    <a href="#plan-section">Pricing</a>
+                    <a href="service.html">Services</a>
+                    <a href="sell.html">Sell Your Music</a>
+                    <a href="rights-management.html">Rights Management</a>
+                    <a href="youtube-monetization.html">YouTube Monetization</a>
+                    <a href="music-distribute.html">Music Distribution</a>
+                    <a href="music-publishing.html">Music Publishing</a>
+                </div>
+
+                <!-- Certifications & Social Media -->
+                <div class="col-md-3 text-center">
+                    <div class="certifications mb-3">
+                        <img src="{{ STATIC_URL }}image/certifications.webp" alt="YouTube Certified">
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://x.com/ChikleeMusic"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/ChikleeMusic"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/chikleemusic"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@ChikleeMusic-cm"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/ChikleeMusic"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>Chikkle Music © Papon Bhowmik. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <script src="{{ STATIC_URL }}js/jquery-1.12.4.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.bundle.min.js"></script>
+    <script src="{{ STATIC_URL }}js/slick.min.js"></script>
+    <script src="{{ STATIC_URL }}js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,1438 @@
+/* Responsive styles for devices with screen width between 320px and 575px */
+@media (min-width: 320px) and (max-width: 575px) {
+    /* Navbar adjustments */
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.192) !important;
+    }
+    .navbar-brand img {
+        width: 100px; /* Further reduce logo size */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Align toggler to the right */
+        background: whitesmoke;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9); /* Add background to collapsed menu */
+        padding: 10px; /* Add padding to collapsed menu */
+    }
+
+    .nav-link {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .dropdown-menu {
+        background-color: transparent; /* Make dropdown menu transparent */
+        border: none; /* Remove border */
+    }
+
+    .dropdown-item {
+        color: #fff; /* Change dropdown item color */
+        font-size: 12px !important; /* Adjust dropdown item font size */
+    }
+
+    .btn-outline-light {
+        font-size: 12px; /* Further reduce button font size */
+        padding: 4px 8px; /* Further reduce button padding */
+    }
+
+    .d-flex.ms-auto {
+        flex-direction: column; /* Stack login/signup buttons vertically */
+        gap: 5px; /* Add spacing between buttons */
+    }
+
+    /* Banner section adjustments */
+    .banner {
+        height: auto; /* Auto height for mobile */
+        padding: 15px; /* Smaller padding for mobile */
+        text-align: center;
+    }
+    .banner-content h1 {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 64px;
+    }
+    .banner-content p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+    .banner .banner-button {
+        padding: 8px 12px; /* Smaller button for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Small service section adjustments */
+    .small-service h4 {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+    .small-service p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Music section adjustments */
+    .music-section h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .music-section p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Upload section adjustments */
+    .upload-section h3 {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+    .upload-section p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+    .upload-section .card {
+        margin-bottom: 15px; /* Add space between cards */
+    }
+
+    /* Upload music platform section adjustments */
+    .upload-music-platform {
+        text-align: center;
+    }
+    .upload-music-platform h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .upload-music-platform h2 {
+        font-size: 24px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .upload-music-platform p {
+        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+
+    /* Slide section adjustments */
+    .slide .item a img {
+        max-width: 60px;
+    }
+
+    /* Premium section adjustments */
+    #plan-section h2 {
+        font-size: 28px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .plan-card {
+        width: 100%; /* Full width for mobile */
+        margin: 10px 0; /* Add space between cards */
+    }
+    .premium-chartlist {
+        text-align: center;
+    }
+
+    /* Distribute section adjustments */
+    .distribute .text-content h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .distribute .text-content p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+    .distribute .circle-background {
+        width: 200px; /* Smaller circle for mobile */
+        height: 200px; /* Smaller circle for mobile */
+        display: none;
+    }
+
+    /* Ultimate section adjustments */
+    .ultimate-section h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+
+    /* Footer adjustments */
+    .footer {
+        text-align: center;
+    }
+    .footer h5 {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+    .footer p,
+    .footer a {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    /* Support page adjustments */
+    .support-form h2 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+    .support-form p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+    .support-form .support-section {
+        padding: 15px; /* Smaller padding for mobile */
+    }
+
+    /* Sell page adjustments */
+    .sell-online p {
+        font-size: 16px;
+    }
+    .sell-online h4 {
+        font-size: 34px;
+    }
+    .sell-store .circle-background {
+        display: none;
+    }
+    .sell-store .text-content h1 {
+        font-size: 26px;
+    }
+    .sell-store .text-content p {
+        font-size: 15px;
+    }
+    .sell-online .sell-title {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .sell-online .sell-p {
+        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .step-card {
+        padding: 15px; /* Smaller padding for mobile */
+    }
+
+    /* Music career section adjustments */
+    .music-carrer .music-career-section h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .music-carrer .music-career-section h2 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+    .music-carrer .music-career-section p {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    /* Sell slider adjustments */
+    .sell-slider .sell-slider-button {
+        padding: 0; /* Remove padding for mobile */
+    }
+
+    /* Our stories section adjustments */
+    .our-stories .stores-section h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .our-stories .stores-section p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Music distribute page adjustments */
+    .music-distribute-banner .banner-content h1 {
+        font-size: 28px;
+        width: 100%;
+        padding-top: 63px;
+    }
+    .music-distribute-banner .banner-content p {
+        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+
+    /* Digital platform section adjustments */
+    .digital-platform h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .digital-platform .platform-card p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Official music section adjustments */
+    .offical-music h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .offical-music p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Social media section adjustments */
+    .social-media h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .social-media p {
+        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+
+    /* Service page adjustments */
+    .service-all-section .ultimited-money .section-title {
+        font-size: 25px;
+    }
+    .service-all-section .ultimited-money p {
+        font-size: 13px;
+        width: 100%;
+    }
+    .service-all-section .section-title {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .service-all-section .choose .section-title {
+        font-size: 28px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .service-all-section .choose h2 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+    .service-all-section .choose p {
+        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+
+    /* Rights management page adjustments */
+    .rights-management-page .digital-rights h1 {
+        font-size: 33px;
+    }
+    .rights-management-page .digital-rights p {
+        font-size: 15px;
+    }
+    .rights-management-page h2 {
+        font-size: 30px;
+    }
+    .rights-management-page .manage-rights .manage-rights-card p {
+        font-size: 14px;
+    }
+    .rights-management-page .call-to-action p {
+        font-size: 15px;
+        width: 100%;
+    }
+    .rights-management-page .call-to-action .banner-button {
+        font-size: 12px;
+    }
+    .rights-management-page p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* YouTube monetization page adjustments */
+    .youtube-monetization-page h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .youtube-monetization-page p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Music publishing page adjustments */
+    .music-publishing-all-service .publish h1 {
+        font-size: 30px;
+    }
+    .music-publishing-all-service .publish p {
+        font-size: 15px;
+    }
+    .music-publishing-all-service .publish .h4 {
+        font-size: 32px;
+    }
+    .music-publishing-all-service .royalities h2 {
+        font-size: 36px;
+    }
+    .music-publishing-all-service .royalities .royalities-card h3 {
+        font-size: 33px;
+        width: 100%;
+    }
+    .music-publishing-all-service .collect-royalties h2 {
+        width: 100%;
+        font-size: 30px;
+    }
+    .music-publishing-all-service .publish-partner h2 {
+        font-size: 30px;
+    }
+    .music-publishing-banner h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .music-publishing-all-service h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .music-publishing-all-service p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Digital distribute page adjustments */
+    .digital-distribute-all-section .my-music h1 {
+        font-size: 28px;
+    }
+    .digital-distribute-all-section .global-platform h2 {
+        font-size: 26px;
+    }
+    .digital-distribute-all-section .global-platform .card-title {
+        font-size: 26px;
+    }
+    .digital-distribute-all-section .global-platform .card-text {
+        font-size: 15px;
+    }
+    .digital-distribute-all-section .global-platform2 h2 {
+        font-size: 30px;
+    }
+    .digital-distribute-all-section .Unlimited-releases h2 {
+        font-size: 30px;
+    }
+    .digital-distribute-banner .banner-content h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    .digital-distribute-banner .banner-content p {
+        font-size: 14px; /* Smaller font size for mobile */
+        width: 100%; /* Full width for mobile */
+    }
+    /* Store page adjustments */
+    .store-all-section .store-item h1 {
+        font-size: 30px;
+    }
+    .store-all-section .sell-music .footer-text {
+        font-size: 30px;
+    }
+    .store-all-section h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+    .store-all-section p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Login page adjustments */
+    .login .login-container {
+        width: 90%; /* Full width for mobile */
+        padding: 15px; /* Smaller padding for mobile */
+    }
+
+    /* Sign up page adjustments */
+    .sign-up-all-section {
+        text-align: center;
+    }
+    .sign-up-all-section h1 {
+        font-size: 28px;
+        margin-top: 58px;
+    }
+    .sign-up-all-section p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    /* Navbar adjustments */
+    .navbar-brand img {
+        max-width: 60px; /* Reduce logo size */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Center align nav items */
+    }
+
+    .nav-link {
+        font-size: 16px; /* Reduce font size */
+        margin: 5px 0; /* Add spacing between nav items */
+    }
+
+    .navbar .navbar-sign,
+    .navbar .navbar-login {
+        font-size: 14px; /* Reduce button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+    .ms-auto {
+        justify-content: center;
+    }
+
+    /* Banner section adjustments */
+    .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .banner-content p {
+        font-size: 18px; /* Reduce paragraph font size */
+    }
+
+    .banner .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Small service section adjustments */
+    .small-service h4 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .small-service p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Music section adjustments */
+    .music-section h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .music-section p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Upload section adjustments */
+    .upload-section h3 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .upload-section p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .upload-section .upload-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Upload music platform section adjustments */
+    .upload-music-platform h2 {
+        font-size: 30px;
+        width: 100%;
+    }
+    .upload-music-platform h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .upload-music-platform h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .upload-music-platform p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Premium section adjustments */
+    #plan-section h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .plan-card {
+        width: 100%; /* Make plan cards full width */
+    }
+
+    .plan-card h3 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .plan-card .price {
+        font-size: 40px; /* Reduce price font size */
+    }
+
+    .plan-card .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+    .premium-chartlist .chartlist-content {
+        padding: 0px 0 0 0;
+    }
+    .premium-chartlist {
+        text-align: center;
+    }
+
+    /* Distribute section adjustments */
+    .distribute .text-content h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .distribute .text-content p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Ultimate section adjustments */
+    .ultimate-section h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .ultimate-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Footer adjustments */
+    .footer {
+        text-align: center;
+    }
+    .footer h5 {
+        font-size: 18px; /* Reduce heading size */
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    /* Support page adjustments */
+    .support-form h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .support-form p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .support-form .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Sell page adjustments */
+    .music-carrer {
+        text-align: center;
+    }
+    .sell-store .text-content h1 {
+        font-size: 45px;
+    }
+    .sell-store .text-content p {
+        font-size: 15px;
+    }
+    .music-carrer .music-career-section h1 {
+        font-size: 43px;
+        width: 100%;
+    }
+    .sell-online .sell-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .sell-online .sell-p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .sell-online h4 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .sell-online p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+    .sell-slider {
+        padding: 1px 25px;
+    }
+
+    /* Music distribute page adjustments */
+    .offical-music {
+        text-align: center;
+    }
+    .social-media h1 {
+        font-size: 50px;
+    }
+    .social-media p {
+        font-size: 20px;
+        width: 100%;
+    }
+    .music-distribute-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .music-distribute-banner .banner-content p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-platform h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .digital-platform .platform-card p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-platform .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Service page adjustments */
+    .music-distribute-banner .banner-content h1 {
+        font-size: 40px;
+    }
+    .music-distribute-banner .banner-content p {
+        font-size: 22px;
+        width: 100%;
+    }
+    .service-all-section .ultimited-money .section-title {
+        width: 100%;
+    }
+    .service-all-section .ultimited-money p {
+        width: 100%;
+    }
+    .service-all-section .section-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose .section-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .service-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Rights management page adjustments */
+    .rights-management-page .call-to-action p {
+        width: 100%;
+    }
+    .rights-management-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .rights-management-page h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .rights-management-page .call-to-action .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* YouTube monetization page adjustments */
+    .rights-management-banner .banner-content h1 {
+        font-size: 41px;
+    }
+    .youtube-monetization-page h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .youtube-monetization-page p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .youtube-monetization-page .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Music publishing page adjustments */
+    .music-publishing-all-service .collect-royalties h2 {
+        font-size: 49px;
+        width: 100%;
+    }
+    .music-publishing-banner h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .music-publishing-all-service h1,
+    .music-publishing-all-service h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .music-publishing-all-service p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .music-publishing-all-service .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Digital distribute page adjustments */
+    .digital-distribute-all-section .global-platform h2 {
+        font-size: 49px;
+    }
+    .digital-distribute-all-section .global-platform2 h2 {
+        font-size: 55px;
+    }
+    .digital-distribute-all-section .Unlimited-releases h2 {
+        font-size: 49px;
+    }
+    .digital-distribute-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .digital-distribute-banner .banner-content p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-distribute-all-section h1,
+    .digital-distribute-all-section h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .digital-distribute-all-section p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-distribute-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Store page adjustments */
+    .store-all-section h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .store-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Login page adjustments */
+    .login .login-container {
+        width: 90%; /* Make login container responsive */
+    }
+
+    /* Sign-up page adjustments */
+    .sign-up-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Navbar adjustments */
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        text-align: center;
+    }
+    .navbar-brand img {
+        max-width: 60px; /* Reduce logo size */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Center align nav items */
+    }
+
+    .nav-link {
+        font-size: 16px; /* Reduce font size */
+        margin: 5px 0; /* Add spacing between nav items */
+    }
+
+    .navbar .navbar-sign,
+    .navbar .navbar-login {
+        font-size: 14px; /* Reduce button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+    .ms-auto {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Banner section adjustments */
+    .banner-content h1 {
+        font-size: 60px; /* Reduce heading size */
+    }
+
+    .banner-content p {
+        font-size: 18px; /* Reduce paragraph font size */
+    }
+
+    .banner .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Small service section adjustments */
+    .small-service h4 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .small-service p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Music section adjustments */
+    .offical-music h1 {
+        font-size: 51px;
+    }
+    .music-section h1 {
+        font-size: 50px;
+        width: 100%;
+    }
+    .music-section p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+    /* Upload section adjustments */
+    .upload-section h3 {
+        font-size: 12px; /* Reduce heading size */
+    }
+
+    .upload-section p {
+        font-size: 12px; /* Reduce paragraph font size */
+    }
+
+    .upload-section .upload-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Upload music platform section adjustments */
+    .upload-music-platform .card1 p {
+        font-size: 8px;
+    }
+    .upload-music-platform .card1 h3 {
+        font-size: 13px;
+    }
+    .upload-music-platform h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .upload-music-platform h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .upload-music-platform p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Premium section adjustments */
+    #plan-section h2 {
+        font-size: 37px; /* Reduce heading size */
+    }
+
+    .plan-card {
+        width: 100%; /* Make plan cards full width */
+    }
+
+    .plan-card h3 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .plan-card .price {
+        font-size: 40px; /* Reduce price font size */
+    }
+
+    .plan-card .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+    .premium-chartlist .chartlist-content p {
+        font-size: 11px;
+    }
+
+    /* Distribute section adjustments */
+    .distribute .text-content h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .distribute .text-content p {
+        font-size: 18px; /* Reduce paragraph font size */
+    }
+
+    /* Ultimate section adjustments */
+    .ultimate-section h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .ultimate-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Footer adjustments */
+    .footer h5 {
+        font-size: 18px; /* Reduce heading size */
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    /* Support page adjustments */
+    .support-form h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .support-form p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .support-form .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Sell page adjustments */
+    .sell-store .circle-background {
+        display: none;
+    }
+    .sell-slider .sell-slider-button {
+        padding: 0px 0 0 240px;
+    }
+    .sell-slider .sell-slider-button .banner-button {
+        padding: 12px 34px;
+        font-size: 15px;
+    }
+    .sell-online .sell-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .sell-online .sell-p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .sell-online h4 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .sell-online p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Music distribute page adjustments */
+    .music-distribute-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .music-distribute-banner .banner-content p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-platform h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .digital-platform .platform-card p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-platform .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Service page adjustments */
+    .music-distribute-banner .banner-content p {
+        width: 79%;
+    }
+    .service-all-section .section-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose .section-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .service-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Rights management page adjustments */
+    .rights-management-page .benefits h3 {
+        font-size: 23px;
+    }
+    .rights-management-page .benefits p {
+        font-size: 11px;
+    }
+    .rights-management-page .call-to-action p {
+        width: 100%;
+    }
+    .rights-management-page .digital-rights p {
+        font-size: 16px;
+    }
+    .rights-management-page .digital-rights h1 {
+        font-size: 52px;
+    }
+    .rights-management-page .manage-rights .manage-rights-card p {
+        font-size: 18px;
+    }
+    .rights-management-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .rights-management-page h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .rights-management-page .call-to-action .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* YouTube monetization page adjustments */
+    .youtube-monetization-page h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .youtube-monetization-page p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .youtube-monetization-page .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Music publishing page adjustments */
+    .music-publishing-all-service .royalities .royalities-card h3 {
+        font-size: 26px;
+        width: 100%;
+    }
+    .music-publishing-banner h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .music-publishing-all-service h1,
+    .music-publishing-all-service h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .music-publishing-all-service p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .music-publishing-all-service .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Digital distribute page adjustments */
+    .digital-distribute-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .digital-distribute-banner .banner-content p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-distribute-all-section h1,
+    .digital-distribute-all-section h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .digital-distribute-all-section p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-distribute-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Store page adjustments */
+    .store-all-section h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .store-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Login page adjustments */
+    .login .login-container {
+        width: 90%; /* Make login container responsive */
+    }
+
+    /* Sign-up page adjustments */
+    .sign-up-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Navbar adjustments */
+    .navbar-brand img {
+        max-width: 60px; /* Reduce logo size */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Center align nav items */
+    }
+
+    .nav-link {
+        font-size: 16px; /* Reduce font size */
+        margin: 5px 0; /* Add spacing between nav items */
+    }
+
+    .navbar .navbar-sign,
+    .navbar .navbar-login {
+        font-size: 14px; /* Reduce button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    /* Banner section adjustments */
+    .banner-content h1 {
+        font-size: 60px; /* Reduce heading size */
+    }
+
+    .banner-content p {
+        font-size: 18px; /* Reduce paragraph font size */
+    }
+
+    .banner .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Small service section adjustments */
+    .small-service h4 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .small-service p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Music section adjustments */
+    .music-section h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .music-section p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Upload section adjustments */
+    .upload-section h3 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .upload-section p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .upload-section .upload-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Upload music platform section adjustments */
+    .upload-music-platform h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .upload-music-platform h2 {
+        width: 100%;
+        font-size: 34px; /* Reduce heading size */
+    }
+
+    .upload-music-platform p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Premium section adjustments */
+    #plan-section h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .plan-card {
+        width: 100%; /* Make plan cards full width */
+    }
+
+    .plan-card h3 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .plan-card .price {
+        font-size: 40px; /* Reduce price font size */
+    }
+
+    .plan-card .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Distribute section adjustments */
+    .distribute .text-content h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .distribute .text-content p {
+        font-size: 18px; /* Reduce paragraph font size */
+    }
+
+    /* Ultimate section adjustments */
+    .ultimate-section h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .ultimate-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Footer adjustments */
+    .footer h5 {
+        font-size: 18px; /* Reduce heading size */
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    /* Support page adjustments */
+    .support-form h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .support-form p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .support-form .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Sell page adjustments */
+    .sell-slider .sell-slider-button {
+        padding: 0px 0 0 343px;
+    }
+    .sell-online .sell-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .sell-online .sell-p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .sell-online h4 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .sell-online p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    /* Music distribute page adjustments */
+    .music-distribute-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .music-distribute-banner .banner-content p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-platform h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .digital-platform .platform-card p {
+        font-size: 14px;
+    }
+
+    .digital-platform .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Service page adjustments */
+    .service-all-section .section-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose .section-title {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .service-all-section .choose p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .service-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Rights management page adjustments */
+    .rights-management-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .rights-management-page h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .rights-management-page .call-to-action .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* YouTube monetization page adjustments */
+    .youtube-monetization-page h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .youtube-monetization-page p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .youtube-monetization-page .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Music publishing page adjustments */
+    .music-publishing-all-service .royalities .royalities-card h3 {
+        font-size: 38px;
+        width: 100%;
+    }
+    .music-publishing-banner h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .music-publishing-all-service h1,
+    .music-publishing-all-service h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .music-publishing-all-service p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .music-publishing-all-service .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Digital distribute page adjustments */
+    .digital-distribute-banner .banner-content h1 {
+        font-size: 50px; /* Reduce heading size */
+    }
+
+    .digital-distribute-banner .banner-content p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-distribute-all-section h1,
+    .digital-distribute-all-section h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .digital-distribute-all-section p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+
+    .digital-distribute-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Store page adjustments */
+    .store-all-section h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .store-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    /* Login page adjustments */
+    .login .login-container {
+        width: 90%; /* Make login container responsive */
+    }
+
+    /* Sign-up page adjustments */
+    .sign-up-all-section .banner-button {
+        font-size: 14px; /* Reduce button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .sell-slider .sell-slider-button {
+        padding: 0 0 0 451px;
+    }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chikkle Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/slick.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/responsive.css">
+</head>
+<body>
+    <!-- preloder st -->
+    <div id="preloder"></div>
+    <!-- preloder end -->
+     <!-- Navbar section start -->
+     <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="/">
+                <img src="{{ STATIC_URL }}image/logo.png" alt="Gallery VISION Logo" width="150"> <!-- Add your logo image -->
+            </a>
+            
+            <!-- Toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Centered Navigation items -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="sell.html">Sell Your Music</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="service.html" id="navbarDropdown" role="button" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="rights-management.html">Rights Management</a></li>
+                            <li><a class="dropdown-item" href="youtube-monetization.html">Youtube Monetization</a></li>
+                            <li><a class="dropdown-item" href="music-publishing.html">Music Publishing</a></li>
+                            <li><a class="dropdown-item" href="digital-distribution.html">Digital Distribution</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#plan-section">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="music-distribute.html">Music Distribution</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+                </ul>
+                <div class="d-flex ms-auto">
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="btn btn-outline-light me-2 navbar-login">Log Out</a>
+                        <div class="btn btn-outline-light me-2 navbar-sign">{{ request.user.username }}</div>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="btn btn-outline-light me-2 navbar-login">Log In</a>
+                        <a href="{% url 'sign_up' %}" class="btn btn-outline-light me-2 navbar-sign">Sign Up For Free</a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Login and Signup buttons aligned right -->
+        </div>
+    </nav>
+    <!-- Navbar section end -->
+
+    <!-- Banner Section Start -->
+    <section class="banner rights-management-banner music-distribute-banner">
+        <!-- Background pic -->
+        <div class="music-distribute-banner-background" style="background-image: url('{{ STATIC_URL }}image/rights-management-banner.png');"></div>
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Banner Content -->
+        <div class="container">
+            <div class="banner-content">
+                <h1>We take 100% <span>responsibility</span> for your music</h1>
+                <p>Register an account with us today and take the musician in you to new heights.  </p>
+                <a href="stores.html" class="btn-banner banner-button">Protect Your Music Now!</a>
+        </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- rights management all section start -->
+<section class="rights-management-page">
+        <!-- digital rights Section start -->
+        <div class="container py-4">
+        <div class="digital-rights row align-items-center">
+         <div class="col-md-6 mb-4 mb-md-0">
+          <img alt="A close-up of a smartphone screen displaying various music apps" class="img-fluid" src="{{ STATIC_URL }}image/digital-rights.webp"/>
+         </div>
+         <div class="col-md-6">
+          <h1 class="display-4 font-weight-bold">
+           Your Digital Rights Manager and
+           <span class="text-red">
+            Partner
+           </span>
+          </h1>
+          <p class="mt-4">
+           We understand how hard it is for musicians and artists to create masterpieces. In spite of all this, protecting your digital music rights and royalties across various platforms globally is hectic job. And, if you do not manage it properly, others start enjoying your music and distributing it for free - putting all your efforts in vain.Here at Galleryvision, we are committed to helping artists bag their rights and get their own revenue effortlessly. Our system ensures that music is distributed with proper agreements and that you get all the earn royalties every time without fail and get compensated. That’s why we have developed Digital Rights Manager (DRM). Which will allow every artist to protect their music free of charge. Galleryvision is the best site to sell music while safeguarding your rights effectively.
+          </p>
+         </div>
+        </div>
+        </div>
+        <!-- digital rights section end -->
+
+        <!-- Manage Your Rights Section start-->
+        <div class="container py-4">
+        <div class="text-center my-5">
+         <h2 class="display-4 font-weight-bold">
+          Manage Your
+          <span class="text-white">
+           Rights
+          </span>
+          &amp;
+          <br/>
+          Protect Your
+          <span class="text-red">
+           Works
+          </span>
+         </h2>
+        </div>
+        <div class="manage-rights row">
+         <div class="col-md-6 mb-4">
+          <div class="bg-dark-gray p-4 rounded border border-green manage-rights-card">
+           <h3 class="h4 font-weight-bold text-red">
+            <i class="fab fa-youtube"></i>
+            YouTube
+           </h3>
+           <p class="mt-3">
+            Protect your music rights on YouTube and YouTube Music with a content ID. We help you claim your rights and earn royalties. Earn monthly payments whenever someone uploads a video on Youtube or Youtube Music with your music in it.
+           </p>
+          </div>
+         </div>
+         <div class="col-md-6 mb-4">
+          <div class="bg-dark-gray p-4 rounded border border-blue manage-rights-card">
+           <h3 class="h4 font-weight-bold text-blue">
+            <i class="fab fa-facebook text-primary"></i>
+            facebook
+           </h3>
+           <p class="mt-3">
+            Own your music forever and earn royalties. We ensure that you get rewarded whenever someone adds your music to their videos or stories. We help you 'Block, Monetize, or Claim any content around the world that matches your track.
+           </p>
+          </div>
+         </div>
+        </div>
+        </div>
+     <!-- Manage Your Rights Section end-->
+
+        <!-- Benefits Section start -->
+        <div class="container py-4">
+        <div class="text-center my-5">
+         <h2 class="display-4 font-weight-bold">
+          Your
+          <span class="text-red">
+           Benefits
+          </span>
+         </h2>
+        </div>
+        <div class=" benefits row">
+         <div class="benefits-card1 col-md-4 mb-4">
+          <div class="p-4 rounded">
+           <h3 class="h5 font-weight-bold">
+            100% ownership
+           </h3>
+           <p class="mt-3">
+            Be in control of your music rights. Your music will be yours forever.
+           </p>
+          </div>
+         </div>
+         <div class="benefits-card2 col-md-4 mb-4">
+          <div class="p-4 rounded">
+           <h3 class="h5 font-weight-bold">
+            Flexible and reliable
+           </h3>
+           <p class="mt-3">
+            We offer reliable, flexible, and tailor-made services to match your specific needs.
+           </p>
+          </div>
+         </div>
+         <div class="benefits-card3 col-md-4 mb-4">
+          <div class="p-4 rounded">
+           <h3 class="h5 font-weight-bold">
+            Dedicated Support
+           </h3>
+           <p class="mt-3">
+            Dedicated support team to help you with music rights, copyright protection, and royalties.
+           </p>
+          </div>
+         </div>
+        </div>
+        </div>
+        <!-- Benefits Section end -->
+
+        <!-- Call to Action Section start -->
+        <div class="call-to-action text-center">
+            <div class="container py-4">
+         <h2 class="display-4 font-weight-bold">
+          Ready to
+          <span class="text-red">
+           protect your rights?
+          </span>
+         </h2>
+         <p class="mt-3">
+          Chikkle Music is always here to help you protect your music, ensuring you get 100% of your ownership and rights back.
+         </p>
+         <a href="sign-up.html"><button class="banner-button btn-lg mt-4">Secure Your Music Now!!</button></a>
+         </div>
+        </div>
+        <!-- Call to Action Section end -->
+</section>
+    <!-- rights management all section end -->
+
+    <!-- footer section start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Get In Touch -->
+                <div class="col-md-3">
+                    <h5>Get In Touch</h5>
+                    <p>info@chikleemusic.com</p>
+                    <p>+971 50 346 0064 (mirpur 1, Dhaka)</p>
+
+                    <h5>Resources</h5>
+                    <a href="#">Get your music on Spotify</a>
+                    <a href="#">Get your music on Amazon</a>
+                    <a href="#">Get your music on Apple</a>
+                    <a href="#">Get your music on YouTube</a>
+                    <a href="#">Get your music on TikTok</a>
+                    <a href="#">Best Platform to sell Music Online</a>
+                    <a href="#">How to get your music on Spotify</a>
+                </div>
+
+                <!-- Company -->
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <a href="support.html">Support</a>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-md-3">
+                    <h5>Useful Links</h5>
+                    <a href="#plan-section">Pricing</a>
+                    <a href="service.html">Services</a>
+                    <a href="sell.html">Sell Your Music</a>
+                    <a href="rights-management.html">Rights Management</a>
+                    <a href="youtube-monetization.html">YouTube Monetization</a>
+                    <a href="music-distribute.html">Music Distribution</a>
+                    <a href="music-publishing.html">Music Publishing</a>
+                </div>
+
+                <!-- Certifications & Social Media -->
+                <div class="col-md-3 text-center">
+                    <div class="certifications mb-3">
+                        <img src="{{ STATIC_URL }}image/certifications.webp" alt="YouTube Certified">
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/ChikleeMusic"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@ChikleeMusic-cm"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/ChikleeMusic"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>Chikkle Music © Papon Bhowmik. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <script src="{{ STATIC_URL }}js/jquery-1.12.4.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.bundle.min.js"></script>
+    <script src="{{ STATIC_URL }}js/slick.min.js"></script>
+    <script src="{{ STATIC_URL }}js/custom.js"></script>
+</body>
+</html>

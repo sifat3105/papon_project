@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chikkle Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/slick.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/responsive.css">
+</head>
+<body>
+    <!-- preloder st -->
+    <div id="preloder"></div>
+    <!-- preloder end -->
+     <!-- Navbar section start -->
+     <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="/">
+                <img src="{{ STATIC_URL }}image/logo.png" alt="Gallery VISION Logo" width="150"> <!-- Add your logo image -->
+            </a>
+            
+            <!-- Toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Centered Navigation items -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="sell.html">Sell Your Music</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="service.html" id="navbarDropdown" role="button" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="rights-management.html">Rights Management</a></li>
+                            <li><a class="dropdown-item" href="youtube-monetization.html">YouTube Monetization</a></li>
+                            <li><a class="dropdown-item" href="music-publishing.html">Music Publishing</a></li>
+                            <li><a class="dropdown-item" href="digital-distribution.html">Digital Distribution</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#plan-section">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="music-distribute.html">Music Distribution</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'user_list' %}">Admin</a></li>
+                    {% endif %}
+                </ul>
+                <div class="d-flex ms-auto">
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="btn btn-outline-light me-2 navbar-login">Log Out</a>
+                        <div class="btn btn-outline-light me-2 navbar-sign">{{ request.user.username }}</div>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="btn btn-outline-light me-2 navbar-login">Log In</a>
+                        <a href="{% url 'sign_up' %}" class="btn btn-outline-light me-2 navbar-sign">Sign Up For Free</a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Login and Signup buttons aligned right -->
+        </div>
+    </nav>
+    <!-- Navbar section end -->
+
+
+    <!-- Banner Section Start -->
+    <section class="banner">
+        <!-- Background Video -->
+        <video autoplay muted loop>
+            <source src="{{ STATIC_URL }}image/banner-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Banner Content -->
+        <div class="container">
+            <div class="banner-content">
+                <h1>Release Your Music <span>Worldwide</span> </h1>
+                <p>Sell your music online: The beat of your music in every listening device, everywhere. Get paid </p>
+                <a href="digital-distribution.html" class="btn-banner banner-button">Distribute Now For Free</a>
+        </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- small service section start -->
+     <section class="small-service">
+        <div class="container py-5">
+            <div class="row text-center">
+                <div class="col-md-3 feature-box">
+                    <img src="{{ STATIC_URL }}image/Shield.png" alt="Shield Icon" class="feature-icon">
+                    <h4 class="mt-3">Own Your Music</h4>
+                    <p>Have complete rights to your music. And get paid each time it is streamed on a platform.</p>
+                </div>
+                <div class="col-md-3 feature-box">
+                    <img src="{{ STATIC_URL }}image/Discount.png" alt="Discount Icon" class="feature-icon">
+                    <h4 class="mt-3">Exclusively Free Service</h4>
+                    <p>Pay nothing for your music, and release your music on iTunes, Apple Music, Amazon, and more.</p>
+                </div>
+                <div class="col-md-3 feature-box">
+                    <img src="{{ STATIC_URL }}image/Play.png" alt="Play Icon" class="feature-icon">
+                    <h4 class="mt-3">Release Your Music</h4>
+                    <p>Release your music across the world. Let your fans speak each time your music is out.</p>
+                </div>
+                <div class="col-md-3 feature-box">
+                    <img src="{{ STATIC_URL }}image/Send.png" alt="Play Icon" class="feature-icon">
+                    <h4 class="mt-3">Share Your Music</h4>
+                    <p>Share your music online. Let your fans wait for your next release.</p>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- small service section end -->
+
+    <!-- music section start -->
+    <section class="music-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-md-6 text-center headphone-img">
+                    <img src="{{ STATIC_URL }}image/sell-headphone.png" alt="Headphone">
+                </div>
+                <!-- Content Column -->
+                <div class="col-md-6">
+                    <h1> <span>Why Sell</span> Your Music Online with Us?</h1>
+                    <p>For over 20 years, artists have collaborated with us. And we have cleared the way to bring life to their music. Our collaborations with artists have gained them a name and a unique space to showcase their talent.</p>
+                    <p>Reach all major online music stores in just a few clicks. Increase your chance of getting noticed and reach millions of fans. If you think your music deserves an audience, then it is time you sell them. And sell them big. And this is where you do it. The best way to sell music online is right here.</p>
+                    <p>Upload your music, proceed to checkout and trust us. Your music will hit the digital screen in no time. Make your claim to fame.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- music section end -->
+
+    <!-- upload section start -->
+    <section class="upload-section">
+        <div class="container">
+            <div class="row">
+                <!-- Feature 1: Worldwide Release -->
+                <div class="col-md-4">
+                    <div class="card card-1">
+                        <div class="icon">
+                            <img src="{{ STATIC_URL }}image/Arrow.webp" alt="">
+                        </div>
+                        <h3>Upload Your Music</h3>
+                        <p>Here’s your chance to upload your music quickly and release it worldwide. Apple Music, spotify, iTunes, Amazon and 100+ digital stores for your track to keep playing.</p>
+                    </div>
+                </div>
+    
+                <!-- Feature 2: YouTube -->
+                <div class="col-md-4">
+                    <div class="card card-1">
+                        <div class="icon">
+                            <img src="{{ STATIC_URL }}image/Discovery.webp" alt="">
+                        </div>
+                        <h3>We Release it Worldwide</h3>
+                        <p>Why wait when you already have your masterpiece? Start selling your music. We release your music worldwide. More stores and streaming services than you have ever heard of.</p>
+                    </div>
+                </div>
+    
+                <!-- Feature 3: Distribute for Free -->
+                <div class="col-md-4">
+                    <div class="card card-1">
+                        <div class="icon">
+                            <img src="{{ STATIC_URL }}image/Wallet.webp" alt="">
+                        </div>
+                        <h3>You Get Paid</h3>
+                        <p>Begin your music career here. Sell your music and get paid every time your music is played. All you have to do is upload your track and we’ve got it from there.Sell soundtracks online.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="text-center mt-5">
+                <a href="digital-distribution.html"><button class="upload-button">Distribute Your Music</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- upload section end -->
+
+    <!-- slide section start -->
+    <section class="slide">
+        <div class="container">
+            <div class="row slider">
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand1.webp"><img src="{{ STATIC_URL }}image/brand1.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand2.webp"><img src="{{ STATIC_URL }}image/brand2.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand3.webp"><img src="{{ STATIC_URL }}image/brand3.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand4.webp"><img src="{{ STATIC_URL }}image/brand4.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand5.webp"><img src="{{ STATIC_URL }}image/brand5.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand6.webp"><img src="{{ STATIC_URL }}image/brand6.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand7.webp"><img src="{{ STATIC_URL }}image/brand7.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand8.webp"><img src="{{ STATIC_URL }}image/brand8.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand9.webp"><img src="{{ STATIC_URL }}image/brand9.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand10.webp"><img src="{{ STATIC_URL }}image/brand10.webp"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <a class="my-image-links" data-gall="gallery01" href="{{ STATIC_URL }}image/brand11.webp"><img src="{{ STATIC_URL }}image/brand11.webp"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- slide section end -->
+
+    <!-- upload music platform section start -->
+    <section class="upload-music-platform">
+        <div class="container text-center section">
+            <h1>Upload Your <span class="highlight">Music</span> From Anywhere, to Any Platform</h1>
+            <p>Streaming, Downloads, YouTube Monetisation, Publishing. Anything from Anywhere. You earn your money and we'll earn you a name.</p>
+        </div>
+        
+        <div class="container section">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2><span class="highlight">Distribute</span> Your Music Globally</h2>
+                    <p class="upload-content-p">Don’t stay a sideliner anymore. If your music needs to have listened to, then it needs to be listened to by the whole world. Release your music on Spotify and other online platforms and go viral. Get yourself on major platforms like Spotify, AppleMusic, AmazonMusic and many more.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{{ STATIC_URL }}image/upload-music1.webp" alt="Music Distribution">
+                </div>
+            </div>
+        </div>
+        
+        <div class="container section">
+            <div class="row align-items-center flex-md-row-reverse">
+                <div class="col-md-6">
+                    <h2><span class="highlight">Market</span> Your Music</h2>
+                    <p class="upload-content-p">You are at a high tide in the market of music. Let us help you ride the tide. Don’t just publish your music. Get noticed. And not just get noticed, create your own fan base with followers, subscribers and viewers. Let them go gaga over your music. Brace up your music marketing with our tools.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{{ STATIC_URL }}image/upload-music2.webp" alt="Music Marketing">
+                </div>
+            </div>
+        </div>
+        
+        <div class="container section">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2><span class="highlight">Own</span> Your Music</h2>
+                    <p class="upload-content-p">Be the author to your music We believe in the artists’ independence in their creations. We believe in you as much as you believe in yourself</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{{ STATIC_URL }}image/upload-music3.webp" alt="Own Your Music">
+                </div>
+            </div>
+        </div>
+
+        <div class="container section">
+            <div class="row align-items-center flex-md-row-reverse">
+                <div class="col-md-6">
+                    <h2><span class="highlight"> Make the right choice with</span> Chikkle Music</h2>
+                    <p class="upload-content-p">Because we are authorised. We value your music the way you do. Complete your creation with perfection.</p>
+                    <div class="four-sector">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card card1">
+                                    <div class="icon">
+                                        <img src="{{ STATIC_URL }}image/Star.webp" alt="">
+                                    </div>
+                                    <h3>Distribution</h3>
+                                    <p>Release your music on more than 100 platforms with our Digital Music Distribution Digital Music Distribution service. Spotify, Deezer, Pandora, and more platforms than you know. Distribute your music with us now, and create an international fanbase. Let your music go viral on every social media platform. Once your release date arrives, wait for your music to be streamed and downloaded. This is where you start getting paid. Increase your revenue at every download and music streaming.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card card1">
+                                    <div class="icon">
+                                        <img src="{{ STATIC_URL }}image/Volume.webp" alt="">
+                                    </div>
+                                    <h3>Publishing</h3>
+                                    <p>The songs you created may be earning more money as it gets streamed. Claim publishing royalties every time your music is streamed on platforms including Spotify, Apple Music, TikTok. Your additional royalties for views on YouTube, radio spin or live performance. Every download and sync where you get paid. Your original songs are generating publishing royalties. We will pitch your track for TV and film placements</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card card1">
+                                    <div class="icon">
+                                        <img src="{{ STATIC_URL }}image/YouTube.webp" alt="">
+                                    </div>
+                                    <h3>YouTube Channel Monetization</h3>
+                                    <p>Your revenue is generated from the unauthorised use of your original content. Keep a track on who is uploading your content. We protect your digital rights. Earn more while your channel associates with advertiser brands. Additionally helps TikTok and Instagram influencers to set up monetisation, live streams and merchandising on YouTube. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card card1">
+                                    <div class="icon">
+                                        <img src="{{ STATIC_URL }}image/Document.webp" alt="">
+                                    </div>
+                                    <h3>Rights Management </h3>
+                                    <p>We make sure that your music and its revenue source is protected. We offer Facebook/Instagram rights manager administration on behalf of music publishers, record labels and music production libraries. Maximise your earnings on your music uploaded on YouTube, Facebook, Instagram and more with your custom agreements and policies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center upload-music-platform-mobile">
+                    <img src="{{ STATIC_URL }}image/upload-music4.webp" alt="Music Marketing">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- upload music platform section end -->
+
+    <!-- premium section start -->
+    <section id="plan-section">
+        <div class="container">
+            <h2>Get Started with Your <span>Unlimited Release Plans</span></h2>
+            <p>Unlimited Release Plans and Personalized Music Strategies</p>
+            <div class="plan-card">
+                <h3>Premium Plan</h3>
+                <p class="price">FREE</p>
+                <p>The ultimate package for labels and industry pros. Enjoy unlimited music releases along with exclusive access to premium services and products.</p>
+                <a href="sign-up.html"><button class="banner-button mt-3">Get Started</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- premium section end -->
+
+    <!-- premium plan chartlist section start -->
+     <section class="premium-chartlist">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="chartlist-content">
+                        <p>Unlimited Distribution to More than 150 Streaming Platforms</p>
+                        <p>Unlimited Releases to All Social Media Platforms</p>
+                        <p>Unlimited artist profiles</p>
+                        <p>Unlimited Label Distribution</p>
+                        <p>Custom Label Name</p>
+                        <p>Content Identification (YouTube, Meta, TikTok…) </p>
+                        <p>Release Approval Time</p>
+                        <p>Spotify Verified Artist Checkmark</p>
+                        <p>Apple Music for Artists verification</p>
+                        <p>YouTube Official Artist Channel</p>
+                        <p>Access To Gallery Vision’s Exclusive Affiliate Portal</p>
+                        <p>Free Custom UPC & ISRC</p>
+                        <p>Schedule releases</p>
+                        <p>Customize the iTunes pricing</p>
+                        <p>Response time from customer service </p>
+                        <p>Monthly Official Sales Reports</p>
+                        <p>Artist Revenue Splits</p>
+                        <p>Daily Trend Reports</p>
+                        <p>Store Automator (automatically adding tracks to new stores)</p>
+                        <p>Country Restrictions at the Release Level</p>
+                        <p>Premium Support</p>
+                        <p>Editorial playlist pitching</p>
+                        <p>Pre Save Links</p>
+                        <p>Vevo Distribution</p>
+                        <p>Music Publishing Administration</p>
+                        <p>Add eligible songs to Spotify's Discovery Mode</p>
+                        <p>Personalized Marketing & Rollout Strategy</p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="pricing-box">
+                        <h5 class="text-uppercase">Premium Plan</h5>
+                        <h2 class="text-white fw-bold">FREE</h2>
+                        <a href="sign-up.html"><button class="banner-button mt-3">Get Started</button></a>
+            
+                        <table class="features-list mt-4">
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td class="fw-bold">Within 48 hrs</td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td class="fw-bold">Within 24 hours</td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                            <tr><td><span class="check-icon"><i class="fa-regular fa-circle-check"></i></span></td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- premium plan chartlist section end -->
+
+    <!-- distribute section start -->
+     <section class="distribute">
+        <div class="container">
+            <div class="row hero-section">
+                <div class="col-md-6 text-content">
+                    <h1>Distribute Your Music @ <span>No Cost</span></h1>
+                    <p>We charge nothing upfront. Every service is provided free of charge, and we charge a minimal commission based on your revenue.</p>
+                </div>
+                <div class="col-md-6 text-center image-container">
+                    <div class="circle-background"></div>
+                    <img src="{{ STATIC_URL }}image/girl-with-headphone.webp" alt="Girl with Headphones">
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- distribute section end -->
+
+    <!-- ultimate section start -->
+    <section class="ultimate-section">
+        <div class="container">
+            <h1>Unlimited Possibilities For <span>Unlimited Music</span></h1>
+            <a href="digital-distribution.html" class="banner-button">Distribute Now For Free</a>
+        </div>
+    </section>
+    <!-- ultimate section end -->
+
+    <!-- footer section start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Get In Touch -->
+                <div class="col-md-3">
+                    <h5>Get In Touch</h5>
+                    <p>info@chikleemusic.com</p>
+                    <p>+971 50 346 0064 (mirpur 1, Dhaka)</p>
+
+                    <h5>Resources</h5>
+                    <a href="#">Get your music on Spotify</a>
+                    <a href="#">Get your music on Amazon</a>
+                    <a href="#">Get your music on Apple</a>
+                    <a href="#">Get your music on YouTube</a>
+                    <a href="#">Get your music on TikTok</a>
+                    <a href="#">Best Platform to sell Music Online</a>
+                    <a href="#">How to get your music on Spotify</a>
+                </div>
+
+                <!-- Company -->
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <a href="support.html">Support</a>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-md-3">
+                    <h5>Useful Links</h5>
+                    <a href="#plan-section">Pricing</a>
+                    <a href="service.html">Services</a>
+                    <a href="sell.html">Sell Your Music</a>
+                    <a href="rights-management.html">Rights Management</a>
+                    <a href="youtube-monetization.html">YouTube Monetization</a>
+                    <a href="music-distribute.html">Music Distribution</a>
+                    <a href="music-publishing.html">Music Publishing</a>
+                </div>
+
+                <!-- Certifications & Social Media -->
+                <div class="col-md-3 text-center">
+                    <div class="certifications mb-3">
+                        <img src="{{ STATIC_URL }}image/certifications.webp" alt="YouTube Certified">
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/ChikleeMusic"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@ChikleeMusic-cm"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/ChikleeMusic"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>Chikkle Music © Papon Bhowmik. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <script src="{{ STATIC_URL }}js/jquery-1.12.4.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.bundle.min.js"></script>
+    <script src="{{ STATIC_URL }}js/slick.min.js"></script>
+    <script src="{{ STATIC_URL }}js/custom.js"></script>
+</body>
+</html>

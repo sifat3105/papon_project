@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chikkle Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/slick.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/responsive.css">
+</head>
+<body>
+<section class="login">
+    <div class="login-container">
+        <h2 class="mb-3">Chikkle <span class="text-danger">Music</span></h2>
+        <h4>Login to continue</h4>
+        {% if error %}
+            <div class="alert alert-error">
+                {{ error }}
+            </div>
+        {% endif %}
+        {% if message %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <input type="text" name= "username" class="form-control" placeholder="Username"required>
+            </div>
+            <div class="mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Password"required>
+            </div>
+            <button type="submit" class="btn btn-custom">Continue</button>
+        </form>
+        <p class="forgot-link mt-3">Forgot password? <a href="#">Click here</a></p>
+    </div>
+</section>
+
+    <script src="{{ STATIC_URL }}js/jquery-1.12.4.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.bundle.min.js"></script>
+    <script src="{{ STATIC_URL }}js/slick.min.js"></script>
+    <script src="{{ STATIC_URL }}js/custom.js"></script>
+</body>
+</html>

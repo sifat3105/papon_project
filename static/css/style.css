@@ -1,0 +1,1745 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Common CSS start */
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, i, span, ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.clr {
+    clear: both;
+}
+
+li {
+    list-style: none;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+/* Common CSS end */
+/* preloder css st */
+#preloder{
+    background: white url(../image/preloader.gif)no-repeat center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+/* preloder css end */
+
+/* Navbar section start */
+.navbar {
+    padding: 10px 0;
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.555) !important;
+    transition: 0.4s all;
+}
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.137) !important; 
+    backdrop-filter: blur(10px)
+}
+.navbar-brand img {
+    height: auto; 
+    max-width: 70px;  
+}
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-link{
+    font-size: 18px;
+    margin: 0 10px;
+    color: white !important;
+    transition: 0.4s all;
+}
+
+.nav-link:hover {
+    transform: scale(1.1); /* Zoom effect */
+    color: #8e151f !important; /* Change color on hover */
+    transition: 0.4s all;
+}
+
+.btn-signup {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.navbar .navbar-sign{
+    border: 2px solid red;
+    font-weight: 700;
+    font-size: 17px;
+    color: white;
+    background-color: #8e151f;
+    padding: 12px 20px;
+}
+.navbar .navbar-sign:hover{
+    background-color: #ba2023;
+    color: white;
+    border: 2px solid red;
+}
+.navbar .navbar-login{
+    border: 2px solid transparent;
+    font-weight: 700;
+    font-size: 17px;
+    color: white;
+    padding: 12px 20px;
+}
+.navbar .navbar-login:hover{
+    border: 2px solid red;
+    color: #8e151f;
+    background-color: transparent;
+}
+/* Dropdown Menu on Hover */
+.navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    background-color: #da2130;
+    padding: 30px 25px;
+}
+
+.navbar .dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    margin-top: 0; /* Remove gap between navbar and dropdown */
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: 700;
+    color: white;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    border: none; 
+}
+
+.dropdown-item {
+    color: white !important; 
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    padding: 10px 20px; 
+    margin: 10px 0;
+}
+
+.dropdown-item:hover {
+    color: black !important;
+    background-color: transparent !important; 
+}
+
+/* Banner Section Start */
+.banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    color: #fff;
+    text-align: left; 
+    overflow: hidden;
+    padding-left: 20px; 
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(162deg, rgba(255, 0, 0, 0.47), rgba(0, 0, 0, 0.47));
+    z-index: 0;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 785px;
+    padding: 20px; 
+    font-family: inherit;
+}
+
+.banner-content h1 {
+    font-size: 85px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.banner-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+.banner-content span{
+    color: red;
+}
+.banner .banner-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.banner .banner-button:hover{
+    background-color: #ba2023;
+}
+/* banner section end */
+/* small service start */
+.small-service{
+    background-color: #000000;
+    color: #fff;
+}
+.small-service .feature-icon {
+    width: 80px;
+}
+.small-service .feature-box {
+    text-align: center;
+    padding: 20px;
+}
+.small-service h4{
+    font-weight: 700;
+    font-size: 28px;
+}
+.small-service p{
+    color: #bebebe;
+    font-weight: 500;
+    font-size: 19px;
+}
+.small-service img{
+    width: 100%;
+}
+/* small service end */
+/* music section start */
+
+.music-section {
+    background-color: black;
+    padding: 40px 20px;
+}
+
+.music-section h1 {
+	font-size: 64px;
+	margin-bottom: 20px;
+	color: white;
+	font-weight: 700;
+	width: 66%;
+}
+.music-section span{
+    color: red;
+}
+
+.music-section p {
+	font-size: 17px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	color: white;
+	font-weight: 600;
+}
+.headphone-img {
+    padding: 20px;
+    text-align: center;
+}
+.headphone-img img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+}
+
+/* music section end */
+/* upload section start */
+
+.upload-section {
+    background-color: black;
+    padding: 60px 20px;
+    margin: 0px auto;
+}
+
+.upload-section h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.upload-section p {
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #bebebe;
+    margin-bottom: 20px;
+}
+
+.upload-section .icon {
+    width: 80px;
+    margin: 10px auto;
+}
+.upload-section .icon img{
+    width: 100%;
+}
+.upload-section .card {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.upload-section .card-1 {
+    background-color: #031013; /* Light blue */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section .card-2 {
+    background-color: #fff3e0; /* Light orange */
+}
+
+.upload-section .card-3 {
+    background-color: #f1f8e9; /* Light green */
+}
+.upload-section .upload-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.upload-section .upload-button:hover{
+    background-color: #ba2023;
+}
+/* upload section end */
+/* upload music platform section start */
+.upload-music-platform{
+    background: rgb(58,103,96);
+    background: radial-gradient(circle, rgba(58,103,96,1) 0%, rgba(0,0,0,1) 100%); 
+    color: white;
+}
+.upload-music-platform h1 {
+	font-size: 60px;
+	font-weight: 700;
+	width: 70%;
+	margin: 0 auto;
+}
+.upload-music-platform h2 {
+	font-size: 45px;
+	font-weight: 700;
+    width: 64%;
+}
+.upload-music-platform p {
+	font-size: 20px;
+	font-weight: 500;
+	color: #bebebe;
+	width: 56%;
+	margin: 20px auto;
+}
+.upload-music-platform .highlight { 
+    color: red; 
+}
+.upload-music-platform .section { 
+    padding: 60px 0; 
+}
+.upload-music-platform .section img {
+	max-width: 100%;
+	border-radius: 44px;
+	box-shadow: -2px 0px 21px #071a1f;
+	filter: drop-shadow(1px 3px 11px #666);
+}
+.upload-music-platform .section .upload-music-platform-mobile img {
+	max-width: 80%;
+}
+.upload-music-platform .icon { 
+    font-size: 40px; 
+    color: red; 
+}
+.upload-music-platform .upload-content-p{
+    width: 100%;
+}
+.upload-music-platform .card1{
+    padding: 20px 25px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    margin: 10px 10px;
+    transition: 0.1s all;
+    border-radius: 10px;
+}
+.upload-music-platform .card1:hover{
+    background-color: #031013;
+    border: 2px solid #2f4547;
+}
+.upload-music-platform .card1 p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #bebebe;
+    width: 100%;
+}
+.upload-music-platform .card1 h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.upload-music-platform .icon {
+    width: 80px;
+    margin: 10px 0;
+}
+.upload-music-platform .icon img{
+    width: 100%;
+    box-shadow: none;
+    filter: drop-shadow(none);
+}
+/* upload music platform section end */
+/* slide section start */
+.slide{
+    background-color: black;
+    padding: 20px 25px;
+}
+.slide .item a img{
+    margin: 0 10px;
+    width: 100%;
+    max-width: 200px;
+}
+/* slide section end */
+/* premium section start */
+#plan-section {
+    background-color: black;
+    padding: 40px 0;
+    text-align: center;
+}
+#plan-section h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    width: 60%;
+    margin: 20px auto;
+}
+#plan-section span{
+    color: red;
+}
+#plan-section p {
+    font-size: 20px;
+    color: #bebebe;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.plan-card {
+    position: relative;
+    background-color: black;
+    width: 550px;
+    padding: 20px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.plan-card::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 4px solid; /* Set border width and style */
+    border-image: linear-gradient(90deg,#FF0000,#FFA500,#FFFF00,#008000,#0000FF,#4B0082,#EE82EE) 1;
+    border-radius: 15px;
+    z-index: 1;
+}
+.plan-card h3 {
+	font-size: 30px;
+	color: white;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+.plan-card p {
+	font-size: 20px;
+	color: #bebebe;
+	font-weight: 500;
+	margin: 0 auto;
+}
+.plan-card .price {
+	font-size: 60px;
+	color: white;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+.plan-card .banner-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.plan-card .banner-button:hover{
+    background-color: #ba2023;
+}
+/* premium section end */
+/* premium chartlist section start */
+.premium-chartlist{
+    background: radial-gradient(circle, #06131A, #000);
+    color: white;
+}
+.premium-chartlist .pricing-box {
+	background-color: #333333;
+	border-radius: 15px;
+	padding: 60px 0;
+	text-align: center;
+	margin: 20px auto;
+	max-width: 500px;
+}
+.premium-chartlist .pricing-box h5{
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+.premium-chartlist .pricing-box h2{
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+}
+.premium-chartlist .pricing-box .banner-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.premium-chartlist .pricing-box .banner-button:hover{
+    background-color: #ba2023;
+}
+.premium-chartlist .check-icon {
+    color: #4CAF50 !important;
+    font-size: 18px;
+}
+.premium-chartlist .features-list {
+    width: 100%;
+    background: #333333;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.premium-chartlist .features-list td {
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+    border-right: none;
+}
+.premium-chartlist .chartlist-content {
+	padding: 260px 0 0 0;
+}
+.premium-chartlist .chartlist-content p{
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    margin: 6px 0 0 0;
+}
+/* premium chartlist section end */
+/* distribute section start */
+.distribute{
+    background: linear-gradient(to right, #03111c, #2f1510, #041f2f);
+    color: white;
+}
+.distribute .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 100px 50px;
+}
+.distribute .text-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+.distribute .text-content span {
+    color: red;
+}
+.distribute .text-content p {
+	font-size: 25px;
+	margin-top: 15px;
+	font-weight: 500;
+}
+.distribute .image-container {
+    position: relative;
+}
+.distribute .circle-background {
+    width: 350px;
+    height: 350px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.distribute .image-container img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+/* distribute section end */
+/* ultimate section start */
+.ultimate-section {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+.ultimate-section span{
+    color: red;
+}
+.ultimate-section h1 {
+	font-size: 64px;
+	font-weight: 700;
+	width: 66%;
+    margin: 20px auto;
+}
+.ultimate-section .banner-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.ultimate-section .banner-button:hover{
+    background-color: #ba2023;
+}
+/* ultimate section end */
+/* footer section start */
+.footer {
+    background-color: #04060b;
+    padding: 50px 0;
+}
+.footer h5 {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+.footer p{
+    color: #bebebe;
+}
+.footer a {
+    color: #bebebe;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+.footer a:hover {
+    color: red;
+}
+.social-icons a {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: red;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+.certifications img {
+    max-height: 50px;
+}
+/* footer section end */
+
+/* support page start */
+.support-form{
+    background: url('../image/support-form-banner.webp') no-repeat center;
+}
+.support-form h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+.support-form p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.support-form p a{
+    text-decoration: none;
+}
+.support-form .support-section {
+    background-image: linear-gradient(140deg, #042d4b, #175773 102.58%, #081831);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 180px auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.support-form .form-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+.support-form .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+.support-form .form-group textarea {
+    resize: none;
+  }
+  
+.support-form .form-group label {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+.support-form .banner-button {
+	padding: 12px 20px;
+	font-size: 17px;
+	font-weight: 700;
+	border: 2px solid red;
+	background-color: #8e151f;
+	color: white;
+	border-radius: 5px;
+	text-decoration: none;
+	width: 100%;
+}
+.support-form .banner-button:hover{
+    background-color: #ba2023;
+}
+/* support page end */
+/* sell page start */
+/* sell banner start */
+.sell-banner .banner-content {
+	max-width: 100%;
+	text-align: center;
+}
+/* sell banner start */
+/* sell online section start */
+.highlight {
+    color: red;
+}
+.sell-online {
+    padding: 60px 0;
+    background-color: black;
+}
+.sell-online .sell-title{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.sell-online .sell-p{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    width: 52%;
+    margin: 0 auto;
+}
+.sell-online h4{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+.sell-online p{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.step-card {
+    background: #1d222b;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.step-icon img {
+    width: 100px;
+    height: 100px;
+}
+/* sell online section end */
+/* sell store section start */
+.sell-store{
+    background: linear-gradient(to right, #03111c, #2f1510, #041f2f);
+    color: white;
+}
+.sell-store .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 100px 50px;
+}
+.sell-store .text-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+.sell-store .text-content span {
+    color: red;
+}
+.sell-store .text-content p {
+	font-size: 25px;
+	margin-top: 15px;
+	font-weight: 500;
+}
+.sell-store .image-container {
+    position: relative;
+}
+.sell-store .circle-background {
+    width: 350px;
+    height: 350px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.sell-store .image-container img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+.sell-store .banner-button {
+	padding: 12px 20px;
+	font-size: 17px;
+	font-weight: 700;
+	border: 2px solid red;
+	background-color: #8e151f;
+	color: white;
+	border-radius: 5px;
+	text-decoration: none;
+	width: 100%;
+}
+.sell-store .banner-button:hover{
+    background-color:ell-store
+}
+/* sell store section end */
+/* music carrer section start */
+.music-carrer{
+    background: linear-gradient(to right, #03111c, #2f1510, #041f2f);
+    padding: 20px;
+}
+.music-carrer .music-career-section {
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.music-carrer .music-career-section h1 {
+	color: white;
+	font-size: 60px;
+	text-align: center;
+	font-weight: 700;
+	width: 75%;
+	margin: 20px auto;
+}
+.music-carrer .music-career-section span{
+    color: red;
+}
+.music-carrer .music-career-section h2 {
+	color: white;
+	font-size: 50px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+.music-carrer .music-career-section p {
+	color: #bebebe;
+	font-size: 15px;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+.music-carrer .music-career-section .feature {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/* music carrer section end */
+/* sell slide section start */
+.sell-slider{
+    background: linear-gradient(to right, #03111c, #2f1510, #311e06);
+    padding: 100px 25px;
+}
+.sell-slider .sell-slider-button {
+	padding: 0 0 0 549px;
+	margin: 50px 0;
+}
+.sell-slider .sell-slider-button .banner-button {
+	padding: 12px 20px;
+	font-size: 17px;
+	font-weight: 700;
+	border: 2px solid red;
+	background-color: #8e151f;
+	color: white;
+	border-radius: 5px;
+	text-decoration: none;
+	width: 100%;
+}
+.sell-slider .sell-slider-button .banner-button:hover{
+    background-color: #ba2023;
+}
+/* sell slide section end */
+/* our stories section start */
+.our-stories{
+    background-color: black;
+    padding: 60px;
+}
+.our-stories .stores-section {
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+.our-stories .stores-section h1 {
+	color: white;
+	font-size: 60px;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+.our-stories .stores-section span{
+    color: red;
+}
+.our-stories .stores-section p {
+	color: #bebebe;
+	font-size: 20px;
+	margin-bottom: 0;
+	font-weight: 600;
+}
+/* our stories section end */
+/* sell page end */
+/* music distribute page start */
+/* banner section start */
+.music-distribute-banner{
+    position: relative;
+}
+.music-distribute-banner-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+.music-distribute-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a0a0a8c;
+    z-index: 0;
+}
+.music-distribute-banner .banner-content h1 {
+	font-size: 74px;
+	text-align: center;
+}
+.music-distribute-banner .banner-content {
+	position: relative;
+	z-index: 1;
+	padding: 20px;
+	max-width: 100%;
+	display: grid;
+	justify-items: center;
+}
+.music-distribute-banner .banner-content p {
+	font-size: 20px;
+	margin-bottom: 30px;
+	font-weight: 600;
+	width: 38%;
+	text-align: center;
+	margin: 20px auto;
+}
+/* banner section start */
+/* digital section start */
+.digital-platform{
+    background-color: black;
+}
+.digital-platform h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px ;
+}
+.digital-platform span{
+    color: red;
+}
+.digital-platform .platform-card {
+    background-color: #212731;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.digital-platform .platform-card p {
+	font-size: 20px;
+	font-weight: 600;
+	color: white;
+	width: 70%;
+	margin: 0 auto;
+}
+.digital-platform .spotify{
+    border: 1px solid #1f6541;
+}
+.digital-platform .apple{
+    border: 1px solid #6b7280;
+}
+.digital-platform .amazon{
+    border: 1px solid #106a96;
+}
+.digital-platform .youtube{
+    border: 1px solid #901340;
+}
+.digital-platform .deezer{
+    border: 1px solid #905b18;
+}
+.digital-platform .tiktok{
+    border: 1px solid #7b173d;
+}
+.digital-platform .platform-card img {
+    margin-bottom: 15px;
+}
+.digital-platform .btn-custom {
+    background-color: #e50914;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+.digital-platform .banner-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.digital-platform .banner-button:hover{
+    background-color: #ba2023;
+}
+/* digital section end */
+/* offical music section start */
+.offical-music{
+    background: linear-gradient(to right, #03111c, #2f1510, #041f2f);
+}
+.offical-music .highlight {
+    color: #ff0000;
+}
+.offical-music h1{
+    color: white;
+    font-size: 58px;
+    font-weight: 700;
+    padding: 20px ;
+}
+.offical-music p {
+	font-size: 20px;
+	font-weight: 600;
+	color: white;
+    padding: 20px;
+}
+.offical-music .offical-music-logo {
+	max-width: 350px;
+	margin-left: 20px;
+}
+.offical-music .offical-music-logo img{
+    width: 100%;
+}
+/* offical music section end */
+/* social media section start */
+.social-media{
+    background: linear-gradient(to bottom, black, #2f1510, black);
+    padding: 20px;
+}
+.social-media .social-media-pic{
+    max-width: 200px;
+}
+.social-media img{
+    width: 100%;
+}
+.social-media h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+    padding: 20px ;
+}
+.social-media p {
+	font-size: 20px;
+	font-weight: 600;
+	color: white;
+	width: 69%;
+	margin: 0 auto;
+}
+.social-media .social-media-logo {
+	max-width: 350px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.social-media img{
+    width: 100%;
+}
+.social-media .banner-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.social-media .banner-button:hover{
+    background-color: #ba2023;
+}
+/* social media section end */
+/* music distribute page end */
+/* service page start */
+.service-all-section .section-title {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+.service-all-section .choose .section-title {
+	font-size: 60px;
+	font-weight: 700;
+	color: white;
+	width: 64%;
+	margin: 0 auto;
+}
+.service-all-section .choose h2 {
+	color: red;
+	font-size: 50px;
+	font-weight: 700;
+	text-align: left;
+	width: 90%;
+}
+.service-all-section .choose p {
+	color: #bebebe;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: left;
+	width: 67%;
+}
+.service-all-section .choose .choose-contain{
+    padding: 30px;
+}
+.service-all-section .ultimited-money .section-title{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    width: 70%;
+    margin: 0 auto;
+}
+.service-all-section .ultimited-money p {
+	color: #bebebe;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	width: 67%;
+    margin: 0 auto;
+}
+.service-all-section .world-wide{
+    background-color: black;
+}
+.service-all-section li{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 2.5;
+}
+.service-all-section li span{
+    color: green;
+}
+.highlight {
+    color: #ff0000;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+.search-bar i {
+    color: #000;
+}
+.service-all-section .global-music{
+    background-color: black;
+}
+.service-all-section .youtube-monetization{
+    background-color: black;
+}
+.service-all-section .rights-management{
+    background-color: black;
+}
+.service-all-section .choose{
+    background: linear-gradient(to right, #03111c, #2f1510, #041f2f);
+}
+.service-all-section .ultimited-money{
+    background: linear-gradient(to left, #03111c, #2f1510, #041f2f);
+}
+.service-all-section .banner-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.service-all-section .banner-button:hover{
+    background-color: #ba2023;
+}
+/* service page end */
+/* rights management page start */
+.rights-management-banner .banner-content h1 {
+	font-size: 74px;
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+}
+.rights-management-page{
+    background-color: black;
+    color: white;
+}
+.rights-management-page .text-red {
+    color: #ff0000;
+}
+.rights-management-page .text-blue {
+    color: blue;
+}
+.rights-management-page .bg-dark-gray {
+    background-color: #343a40;
+}
+.rights-management-page .border-green {
+    border-color: #28a745 !important;
+}
+.rights-management-page .border-blue {
+    border-color: #007bff !important;
+}
+.rights-management-page .call-to-action{
+    background: linear-gradient(to right, #03111c, #2f1510, #041f2f);
+}
+.rights-management-page .benefits-card1{
+    background: url(../image/rights-benefits-1.webp)no-repeat center;
+}
+.rights-management-page .benefits-card2{
+    background: url(../image/rights-benefits-2.webp)no-repeat center;
+}
+.rights-management-page .benefits-card3{
+    background: url(../image/rights-benefits-3.webp)no-repeat center;
+}
+.rights-management-page .call-to-action .banner-button{
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.rights-management-page .call-to-action .banner-button:hover{
+    background-color: #ba2023;
+}
+.rights-management-page .digital-rights h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+.rights-management-page .digital-rights p {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+.rights-management-page h2{
+    font-size: 60px;
+    font-weight: 700;
+}
+.rights-management-page .manage-rights .manage-rights-card{
+    text-align: center
+}
+.rights-management-page .manage-rights .manage-rights-card p{
+    font-size: 20px;
+    color: #bebebe;
+    font-weight: 600;
+}
+.rights-management-page .benefits{
+    text-align: center;
+}
+.rights-management-page .benefits h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    padding: 20px;
+}
+.rights-management-page .benefits p{
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    padding: 20px;
+}
+.rights-management-page .call-to-action{
+    padding: 50px;
+}
+.rights-management-page .call-to-action p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #bebebe;
+    width: 50%;
+    margin: 0 auto;
+}
+/* rights management page end */
+/* youtube monetization page start */
+.youtube-monetization-page{
+    background-color: #1e1e1e;
+}
+.youtube-monetization-page h1{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+.youtube-monetization-page .card-title{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+.youtube-monetization-page span{
+    color: red;
+}
+.youtube-monetization-page p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #bebebe;
+}
+.youtube-monetization-page .youtube-service{
+    background: url(../image/youtube-service-bg.png)no-repeat center;
+    background-size: cover;
+}
+.youtube-monetization-page .card {
+    background-color: #333;
+}
+.youtube-monetization-page .card-title {
+    color: white;
+}
+.youtube-monetization-page .card-text {
+    color: #ccc;
+}
+.youtube-monetization-page .btn-custom {
+    background-color: #dc3545;
+    color: white;
+}
+.youtube-monetization-page .banner-button{
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.youtube-monetization-page .banner-button:hover{
+    background-color: #ba2023;
+}
+/* youtube monetization page end */
+/* music publishing page start */
+.music-publishing-banner h1{
+    font-size: 74px;
+    text-align: center;
+    width: 62%;
+}
+.music-publishing-all-service{
+    background-color: black;
+    color: white;
+}
+.music-publishing-all-service .bg-dark-gray {
+    background-color: #343a40;
+}
+.music-publishing-all-service .text-red {
+    color: #dc3545;
+}
+.music-publishing-all-service .publish h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+.music-publishing-all-service .royalities h2{
+    font-size: 60px;
+    font-weight: 700;
+}
+.music-publishing-all-service .publish-partner h2{
+    font-size: 60px;
+    font-weight: 700;
+}
+.music-publishing-all-service .publish-partner p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.music-publishing-all-service .collect-royalties h2 {
+	font-size: 60px;
+	font-weight: 700;
+	width: 70%;
+	margin: 0 auto;
+}
+.music-publishing-all-service .collect-royalties p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.music-publishing-all-service .royalities .royalities-card{
+    text-align: center;
+    padding: 30px;
+}
+.music-publishing-all-service .royalities .royalities-card h3 {
+	font-size: 41px;
+	font-weight: 600;
+	width: 75%;
+	margin: 0 auto;
+}
+.music-publishing-all-service .royalities .royalities-card p {
+	font-size: 20px;
+	font-weight: 600;
+    margin: 20px 0;
+    color: #bebebe;
+}
+.music-publishing-all-service .publish .h4{
+    font-size: 50px;
+    font-weight: 700;
+    color: red;
+}
+.music-publishing-all-service .publish .display-4{
+    font-size: 100px;
+    font-weight: 700;
+}
+.music-publishing-all-service .publish p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #bebebe;
+}
+.music-publishing-all-service .banner-button{
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.music-publishing-all-service .banner-button:hover{
+    background-color: #ba2023;
+}
+/* music publishing page end */
+/* digitaldistribute page start */
+.digital-distribute-banner .banner-content h1 {
+	font-size: 74px;
+	text-align: center;
+	width: 65%;
+	margin: 0 auto;
+}
+.digital-distribute-banner .banner-content p {
+	font-size: 20px;
+	margin-bottom: 30px;
+	font-weight: 600;
+	width: 58%;
+	text-align: center;
+	margin: 20px auto;
+}
+.digital-distribute-all-section{
+    background-color: #000;
+    color: #fff;
+}
+.digital-distribute-all-section .section-title {
+    color: #fff;
+}
+.digital-distribute-all-section .highlight {
+    color: #ff0000;
+}
+.digital-distribute-all-section .text-red {
+    color: #ff0000;
+}
+.digital-distribute-all-section .card-custom {
+    background-color: #333;
+    border: none;
+    height: 100%;
+}
+.digital-distribute-all-section .btn-custom {
+    background-color: #ff0000;
+    border: none;
+}
+.digital-distribute-all-section .card-body-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.digital-distribute-all-section .banner-button{
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.digital-distribute-all-section .banner-button:hover{
+    background-color: #ba2023;
+}
+.digital-distribute-all-section .my-music h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+.digital-distribute-all-section .global-platform h2{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.digital-distribute-all-section .my-music p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.digital-distribute-all-section .my-music .card-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: red;
+}
+.digital-distribute-all-section .my-music .card-text{
+    font-size: 20px;
+    font-weight: 600;
+    color: #bebebe;
+}
+.digital-distribute-all-section .global-platform .card-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: red;
+}
+.digital-distribute-all-section .global-platform .card-text{
+    font-size: 20px;
+    font-weight: 600;
+    color: #bebebe;
+}
+.digital-distribute-all-section .global-platform h2{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.digital-distribute-all-section .global-platform2{
+    text-align: center;
+}
+.digital-distribute-all-section .global-platform2 h2{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.digital-distribute-all-section .global-platform2 .card-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+.digital-distribute-all-section .global-platform2 .card-text{
+    font-size: 20px;
+    font-weight: 600;
+    color: #bebebe;
+}
+.digital-distribute-all-section .Unlimited-releases h2{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.digital-distribute-all-section .Unlimited-releases p{
+    font-size: 20px;
+    font-weight: 600;
+}
+/* digitaldistribute page end */
+/* store page start */
+.store-all-section{
+    background-color: black;
+    color: white;
+}
+.store-all-section .card {
+    background-color: #2d2d2d;
+    border: none;
+  }
+.store-all-section .card img {
+    height: auto;
+}
+.store-all-section .store-item h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+.store-all-section .store-item span{
+    color: red;
+}
+.store-all-section .store-item img{
+    width: 100%;
+}
+.store-all-section .sell-music .footer-text{
+    font-size: 60px;
+    font-weight: 700;
+}
+.store-all-section .sell-music span{
+    color: red;
+}
+.store-all-section .sell-music .banner-button{
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.store-all-section .sell-music .banner-button:hover{
+    background-color: #ba2023;
+}
+/* store page end */
+/* login page start */
+.login{
+    background: linear-gradient(90deg, #2c003e, #3d1b56, #4e2a67, #5f3a78, #6f4a89, #2e2e2e, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.login .login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    width: 350px;
+    text-align: center;
+}
+.login .login-container h4 {
+    margin-bottom: 20px;
+}
+.login .form-control {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.login .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.login .btn-custom {
+    background: white;
+    color: black;
+    width: 100%;
+}
+.login .forgot-link a {
+    color: white;
+    text-decoration: none;
+}
+/* login page end */
+/* sign up page start  */
+.sign-up-all-section{
+    background-color: #1a1a1a;
+    color: white;
+}
+.sign-up-all-section .banner-button{
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid red;
+    background-color: #8e151f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.sign-up-all-section .banner-button:hover{
+    background-color: #ba2023;
+}
+.sign-up-all-section .bg-dark-custom {
+    background-color: #2a2a2a;
+}
+.sign-up-all-section .text-red-custom {
+    color: #ff0000;
+}
+/* sign up page end */
